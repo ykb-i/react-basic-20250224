@@ -21,13 +21,12 @@ interface Store{
     state1: number;
     setState1: (state1: number) => void;
     increaseState1: () => void;
-    }
+}
 
     // - create 함수의 매개변수로 set 함수 매개변수를 받는 콜백함수를 전달해야함
     // - set 함수 : 상태(store)를 변경하기 위한 함수
     // - create 함수로 전달한 콜백 함수는 store 객체를 반환
-
-    const useStore = create<Store>((set) => ({
+const useStore = create<Store>((set) => ({
     state1: 0,
     // create 함수의 매개변수로 전달된 콜백 함수의 set 함수를 통해서 상태를 변경
     // set 함수의 매개변수로는 현재 상태(store)를 받는 콜백함수를 전달
@@ -38,9 +37,6 @@ interface Store{
 
 
 export default function Zustand() {
-
-   
-
 //   const [state1, setState1] = useState<number>(0);
 
     //   const onChangeHandler = () => {
